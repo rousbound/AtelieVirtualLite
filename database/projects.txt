@@ -1,0 +1,29 @@
+Title: CariocaScript
+Description: Simple programming language
+Technology: C, Flex/Bison, Yacc, Assembly x84-64
+Link: https://github.com/rousbound/CariocaScript
+Image: img/cariocaAscii7.png
+
+Title: EscolaVirtual
+Description: Inventory creator tool for teachers
+Technology: Java, AndroidStudio
+Link: https://github.com/rousbound/EscolaVirtual
+Image: img/academicascii.png
+
+Title: CataÔnibus
+Description: Bus position tracker for Rio de Janeiro city
+Technology: GeoPy for CLI version, PyQt for GUI version, Django and Leaflet for Web version
+Link: https://github.com/rousbound/CataOnibus
+Image: img/busascii5.png
+
+Title: CifraVirtual
+Description: Interface for lyrics, song playback and recording
+Technology: Python, PyQt5, Vlc
+Link: https://github.com/rousbound/CifraVirtual
+Image: img/colcheiaascii3.png
+
+Title: Darwin
+Description: Genetic algorithm framework for games
+Technology: Python, Numpy and PyGame
+Link: https://github.com/rousbound/Darwin
+Image: img/evolutionascii.png

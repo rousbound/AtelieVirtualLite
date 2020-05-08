@@ -1,0 +1,427 @@
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+  <title>AteliêVirtual</title>
+  <link rel="stylesheet" href = "/static/styles.css">
+  <link rel="shortcut icon" type="image/png" href="/static/img/favicon3.ico"/>
+
+</head>
+
+<style>
+.boxed.one{
+  width: 1000px;
+  padding: 10px;
+  margin: 20px;
+  border: 3px solid black;
+}
+</style>
+
+
+<style>
+body{
+  /*margin-top: -120px;
+  transform: scale(0.8);
+  transform-origin: 0 1;*/
+}
+  .topnav {
+      color: #f2f2f2;
+      text-align: center;
+      padding: 00px 10px;
+      text-decoration: none;
+      font-size: 30px;
+      margin-top: -20px;
+  }
+
+        .topnav a:link{
+          border: 2px white;
+          padding: 10px;
+          margin-right: 5px;
+        }
+        .topnav a:hover{
+          border: 2px solid black;
+          padding: 10px;
+          margin-right: 5px;
+        }
+
+</style>
+<body>
+<div class="container" >
+  <div class = "row justify-content-center">
+    <a class="navbar-brand" href="/">
+      <img src= "/static/img/AV2.png" alt = "" width="100%" align="left">
+
+    </a>
+  </div>
+</div>
+  <div id = font1 class = "topnav" >
+    <hr>
+    <a href = "/" style = "color: #000000; text-decoration: none"   >Código</a>
+    <a href = "/Lectures" style = "color: #000000; text-decoration: none">Texto</a>
+    <hr>
+  </div>
+
+
+<div class= "row justify-content-center">
+  <div class = "boxed one">
+    <div class="container">
+        
+<h1 id = font1>CariocaScript</h1>
+<div class="row" id = font1>
+    <div class="col-md-8">
+        <img src="/static/img/cariocaAscii7.png" alt="" width="80%">
+    </div>
+    <div class="col-md-4">
+        <h5>About the project:</h5>
+        <p>Simple programming language</p>
+        <br>
+        <h5>Technology used:</h5>
+        <p>C, Flex/Bison, Yacc, Assembly x84-64</p>
+        <h5>Link to github:</h5>
+        <p><a href = https://github.com/rousbound/CariocaScript>https://github.com/rousbound/CariocaScript</a></p>
+    </div>
+    
+      
+  <style> #MyRow{
+            width: 50%;
+            margin: 3 auto;
+            padding: 24px;
+            border: 1px solid black;
+            text-align: left;
+  }
+          div.a{
+            text-align: center;
+            margin-top: 50px;
+              }
+  </style>
+      <div class = "a">
+        <h1> Documentation </h1>
+      <div>
+    
+  <div id="MyRow" class = "row">
+      <ul>
+<li><strong>Course:</strong> INF1022</li>
+<li><strong>Semester:</strong> 2019.2</li>
+<li><strong>Supervisor:</strong> Edward Hermann Haeusler</li>
+<li><strong>Group members:</strong>
+<ul>
+<li><em>Geraldo Luiz de Carvalho Pereira Junior</em></li>
+</ul></li>
+<h2 id="seções">Seções</h2>
+</ul>
+<ul>
+<li><a href="#getting-started">Aquecendo os tambores</a></li>
+<li><a href="#running-tests">Pisando fundo</a></li>
+<li><a href="#development">Queimando a mufa</a>
+<ul>
+<li><a href="#code-generation">Arrancando os cabelos</a></li>
+</ul></li>
+<li><a href="#bibliography">Bibliografia</a></li>
+</ul>
+<p>Primeiramente gostaria de agradecer enormemente ao projeto no qual baseei esse trabalho: https://github.com/guidanoli/provolone</p>
+<h2>Aquecendo os tambores - Instalando os pré-requisitos</h2>
+<p>Para rodar o projeto é necessário ter os pacotes <em>Flex</em> e <em>Bison</em> instalados, o que pode ser feito através da linha de comando no Ubuntu:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" data-line-number="1">$ <span class="fu">sudo</span> apt install flex</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2">$ <span class="fu">sudo</span> apt install bison</a></code></pre></div>
+<br>
+<p>E no Fedora:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" data-line-number="1">$ <span class="fu">sudo</span> yum install flex.x86_64</a>
+<a class="sourceLine" id="cb2-2" data-line-number="2">$ <span class="fu">sudo</span> yum install bison.x86_64</a></code></pre></div>
+<h2 id="pisando-fundo---rodando-seu-primeiro-programa">Pisando fundo - Rodando seu primeiro programa</h2>
+<p>Para rodar o programa é muito simples, é só rodar o programa “Coe” passando um arquivo com extensão “.cara” por argumento, como por exemplo:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" data-line-number="1">$ <span class="ex">./Coe</span> tests/t3-nested_operations.cara</a></code></pre></div>
+<p>Vemos abaixo o programa <code>&quot;t3-nested_operations.cara&quot;</code>:</p>
+<pre><code>-----------------------------
+CHEGAMAIS X,Y,Z NAMORAL
+
+SEPA X TA_LGD
+  MARCA Y RAPIDAO
+    SEPA X TA_LGD
+      X-- 
+    VALEU
+    Z++ 
+  VALEU
+SENAO
+    X++ 
+VALEU
+
+
+FALATU(X)
+FALATU(Y)
+FALATU(Z)
+
+VALEU
+------------------------------</code></pre>
+<p>A execução do programa com o input de X,Y e Z declarado como 1,2 e 3, devolve o seguinte output:</p>
+<pre><code>CariocaScript 1.0 Copyright (C) 2019 PUC-Rio
+Falai meu consagrado, que que você manda?
+Meu Brother: 1 2 3
+
+Meu Parcerasso:0
+Meu Parcerasso:2
+Meu Parcerasso:5 </code></pre>
+<p>Verificamos o output do programa com a string “Meu Parcerasso”. Resultante do comando <code>FALATU(id)</code>(equivalente do print), que imprime respectivamente, o valor de X,Y e Z que passamos como entrada.</p>
+<h2 id="queimando-a-mufa---modificando-a-gramática">Queimando a mufa - Modificando a gramática</h2>
+<h3 id="concertando-conflitos-shift-reduce">Concertando conflitos Shift-Reduce</h3>
+<p>Aqui eu relato as mudanças que fiz sobre a Provol-One, linguagem proposta no cabeçalho do trabalho:</p>
+<pre><code>program -&gt; ENTRADA varlist SAIDA varlist cmds FIM
+varlist -&gt; id varlist | id
+cmds -&gt; cmd cmds | cmd
+cmd -&gt; FACA id VEZES cmds FIM
+cmd -&gt; ENQUANTO id FACA cmds FIM
+cmd -&gt; SE id ENTAO cmds SENAO cmds | SE id ENTAO cmds
+cmd -&gt; id = id | INC(id) | ZERA(id)</code></pre>
+<p>Tendo uma gramática ambígua, duas mudanças formais precisaram ser feitas na ProvolOne para evitar conflitos de Shift/Reduce:</p>
+<ol type="1">
+<li>Inverter a ordem da chamada de si mesmo em comandos recursivos como <code>cmds</code> e <code>var_list</code> da seguinte forma:</li>
+</ol>
+<pre><code>cmds: cmd cmds (Antes)
+cmds: cmds cmd (Depois)
+
+var_list: var_dev var_list (Antes)
+var_list: var_list var_def (Depois)</code></pre>
+<p>Isso é necessário pois no caso da recursão a direita, todos os elementos precisam ser colocados na pilha antes da regra poder ser aplicada e os elementos poderem ser reduzidos.<sup>(1)</sup></p>
+<ol start="2" type="1">
+<li>Distinguir o comando <code>SE var_ref ENTAO cmds</code> de <code>SE var_ref ENTAO cmds SENAO cmds</code>, para acabar com a ambiguidade entre eles. O que pode ser feito terminando cada expressão com o token <code>FIM</code>.</li>
+</ol>
+<p>Após as alterações iniciais que tornaram a linguagem funcional, a gramática passou por outra transformação para se tornar a CariocaScript:</p>
+<pre><code>program -&gt; CHEGAMAIS input NAMORAL cmds VALEU
+input -&gt; var_list
+var_list -&gt; var_list var_def
+var_def -&gt; id
+var_ref -&gt; id
+cmds -&gt; cmds cmd | cmd
+cmd -&gt; MARCA var_ref RAPIDAO cmds VALEU
+cmd -&gt; ENQUANTO var_ref FACA cmds VALEU
+cmd -&gt; SEPA var_ref TA_LGD cmds SENAO cmds | SE var_ref VALEU cmds
+cmd -&gt; var_ref = var_ref | var_ref++ | id-- | RELAXOU(var_ref) |
+FALATU(var_ref) | var_ref += var_ref 
+| var_ref -= var_ref</code></pre>
+<p>Sendo uma linguagem informal, cabe esclarecer algumas keywords:</p>
+<ol type="1">
+<li><code>ENTRADA</code> é substituída pelo <code>CHEGAMAIS</code>.</li>
+<li><p><code>SAIDA</code> é substituída pelo <code>FALATU(id)</code>, que exerce a função de printar o valor da variável, de tal forma que o programador possa escolher as saidas do programa de maneira mais flexível.</p></li>
+<li><code>FACA id VEZES cmds FIM</code> é substituído pelo <code>MARCA id RAPIDAO cmds VALEU</code>.</li>
+<li><code>SE id ENTAO cmds VALEU</code> é substituído pelo <code>SEPA id TA_LGD cmds VALEU</code>, onde lê-se <code>TA_LGD</code> como “tá ligado?”.</li>
+<li><p><code>ZERA(id)</code> é substituído pelo operador <code>RELAXOU(id)</code>.</p></li>
+<li><p>E por <code>FIM</code>, há o operador <code>VALEU</code> que encerra todos os comandos não terminais para evitar ambiguidade.</p></li>
+</ol>
+<h3 id="arrancando-os-cabelos---geração-de-código">Arrancando os cabelos - Geração de Código</h3>
+<p>Vemos abaixo o pseudo-código gerado pela Provol-One:</p>
+<pre><code>q0 COPIA(3,2) q1
+q1 COPIA(4,1) q2
+q2 ZERA(5) q3
+q3 INC(3) q4
+q4 INC(5) q5
+q4 IF(5,4) q6,q3
+q6 FIM</code></pre>
+<p>Sendo muito próximo ao assembly, a CariocaScript fez esse pulo e se tornou executável. Ao rodar o programa <code>Coe</code>:</p>
+<ol type="1">
+<li><p>Recompila-se o projeto através do arquivo <code>Makefile</code> e gera-se o executável.</p></li>
+<li><p>Encaminha-se o arquivo “<code>.cara</code>” passado por argumento para o arquivo binário <code>bin/CariocaScript</code>, que por sua vez gera o arquivo assembly.</p></li>
+<li><p>Compila-se o arquivo assembly junto de uma main no diretório <code>/program</code> que é encarregada de chamar a função CariocaScript, que consiste em nosso programa “<code>.cara</code>” e por isso não retorna nem recebe nenhum valor.</p></li>
+</ol>
+<h4 id="contagem-de-labels-e-controle-de-fluxo">Contagem de Labels e controle de fluxo</h4>
+<p>A geração de código da CariocaScript se dá em puro assembly. A maior dificuldade encontrada em montar um bloco de código em assembly é na tradução das instruções de controle de fluxo de execução. O sistema é na bem simples na no caso da tradução do <code>SEPA</code> por exemplo:</p>
+<pre><code>cmpl $0,-8(%rbp)
+je L1
+addl $1,-8(%rbp) //Instrução caso verdadeiro
+L1:</code></pre>
+<p>Em seguida incrementa-se em um o contador de labels. Se isso for feito a cada leitura de um <code>cmd</code>, e se na construção de um bloco de código, também for printado o valor da label vigente incrementando mais um, tudo parece funcionar. Me refiro ao caso do <code>SEPA id TA_LGD cmds SENAO cmds VALEU</code>, onde é necessário ao menos duas labels:</p>
+<pre><code>sprintf(s_if,  &quot;         cmpl $0,-%d(%rbp) \n\t &quot;
+               &quot;         je L%d\n&quot;,getRbpOffset($2),label);
+
+-----------Caso primeira condição verdadeira----------------
+   
+sprintf(s_else,&quot;      \t jmp L%d\n&quot;
+               &quot;     L%d:\n&quot;,label+1,label);
+
+----------------------------Else----------------------------
+   
+sprintf(s_exit,&quot;     L%d:\n&quot;,label+1);</code></pre>
+<h4 id="administração-de-variáveis">Administração de variáveis</h4>
+<p>Outra curiosidade é a administração de variáveis, que se dá através de alocação na pilha através de um cálculo simples. Todas as operações são feitas referenciando a pilha, usando um registrador callee-saved quando necessário, para contornar operações que são ilegais para dois endereços simultâneos, como <code>movl -8(%rbp), -16(%rbp)</code>(corresponderia a instrução <code>id = id</code>):</p>
+<pre><code>movl -8(%rbp), %r12d
+movl %r12d, -16(%rbp)</code></pre>
+<p>Em suma, usa-se o %r12d para intermediar operações aritméticas com variáveis do usuário, e o %r13d para intermediar operações aritméticas com contadores criados pela linguagem, como no caso do comando <code>MARCA id RAPIDAO cmds VALEU</code>:</p>
+<pre><code>movl $0,%r13d              //i==0
+L1:
+   addl $1,%r13d           //i++
+   addl $1, -16(%rbp)      //Y++
+   cmpl %r13d,-8(%rbp)     //X==Y
+   jne L1</code></pre>
+<p>Caso contrário, se utilizássemos o mesmo registrador para ambos o casos, uma atribuição dentro de um comando <code>MARCA id RAPIDAO</code>, iria sobreescrever o contador de iterações. Por outro lado, se o contador fosse armazenado na pilha, a comparação poderia ser realizada pelo %r12d. Por hora, não há necessidade de economizar registradores, e o código gerado fica mais enxuto.</p>
+<h3 id="exemplo-de-geração-de-código">Exemplo de geração de código</h3>
+<h4 id="teste-t3-nested_operations.cara">Teste t3-nested_operations.cara</h4>
+<p>Para o programa mencionado na seção <code>Pisando Fundo</code>, temos o seguinte código assembly:</p>
+<pre class="assembly"><code>.globl  cariocaScript
+ Si:  .string &quot;Meu Brother: &quot;
+
+ Sii:  .string &quot;%d&quot;
+
+ Nl:  .string &quot;\n&quot;
+
+ Sf:  .string &quot;Meu Parcerasso:%d\n&quot;
+
+ cariocaScript:
+   pushq %rbp
+   movq %rsp,%rbp
+   subq $32, %rsp
+
+   movq $Si, %rdi
+   call printf
+   movq $Sii, %rdi
+   leaq -8(%rbp), %rsi
+   call scanf
+
+   movq $Sii, %rdi
+   leaq -16(%rbp), %rsi
+   call scanf
+
+   bovq $Sii, %rdi
+   leaq -24(%rbp), %rsi
+   call scanf
+
+  ddl $1, -8(%rbp)
+L1:
+   jmp L4
+L3:
+   addl $1, -16(%rbp)
+L4:
+     movl $0,%r13d
+L5:
+     addl $1,%r13d
+   addl $1, -24(%rbp)
+     cmpl %r13d,-8(%rbp)
+   jne L5
+
+L7:
+   cmpl $0, -24(%rbp)
+   je L8
+   cmpl $0,-8(%rbp)
+   je L6
+   addl $1, -8(%rbp)
+L6:
+   subl $1, -24(%rbp)
+   jmp L7
+L8:
+ movq $Nl, %rdi
+   call printf
+
+   cmpl $0,-8(%rbp)
+   je L4
+   movl $0,%r13d
+L2:
+   addl $1,%r13d
+   cmpl $0,-8(%rbp)
+   je L1
+   subl $1, -8(%rbp)
+L1:
+   addl $1, -24(%rbp)
+   cmpl %r13d,-16(%rbp)
+   jne L2
+
+   jmp L5
+L4:
+   addl $1, -8(%rbp)
+L5:
+   movq $Sf, %rdi
+   movl -8(%rbp), %esi
+   call printf
+
+   movq $Sf, %rdi
+   movl -16(%rbp), %esi
+   call printf
+
+   movq $Sf, %rdi
+   movl -24(%rbp), %esi
+   call printf
+
+   movq %rbp, %rsp
+   popq %rbp
+   ret</code></pre>
+<h4 id="teste-t2-all_operations.cara">Teste t2-all_operations.cara</h4>
+<p>A função desse teste é ser abrangente e usar todos os comandos.</p>
+<pre><code>CHEGAMAIS X, Y, Z, A, B NAMORAL
+SEPA X TA_LGD
+  SEPA Y TA_LGD
+    X++
+  VALEU
+SENAO
+  Y++
+VALEU
+
+MARCA X RAPIDAO
+  Z++
+VALEU
+
+
+ENQUANTO Z FACA
+  SEPA X TA_LGD
+    X++
+  VALEU
+ Z--
+VALEU
+
+FALATU(X)
+FALATU(Y)
+FALATU(Z)
+FALATU(A)
+B++
+FALATU(B)
+
+VALEU</code></pre>
+<p>Aqui foi encurtado o trecho em assembly, retirando a parte dos prints, preparação e encerramento do bloco de código, que são iguais ao exemplo anterior. Foi preservado apenas a lógica do controle de fluxo:</p>
+<pre><code>   cmpl $0,-8(%rbp)
+   je L3
+   cmpl $0,-16(%rbp)
+   je L1
+   addl $1, -8(%rbp)
+L1:
+   jmp L4
+L3:
+   addl $1, -16(%rbp)
+L4:
+   movl $0,%r13d
+L5:
+   addl $1,%r13d
+   addl $1, -24(%rbp)
+   cmpl %r13d,-8(%rbp)
+   jne L5
+
+L7:
+   cmpl $0, -24(%rbp)
+   je L8
+   cmpl $0,-8(%rbp)
+   je L6
+   addl $1, -8(%rbp)
+L6:
+   subl $1, -24(%rbp)
+   jmp L7
+L8:</code></pre>
+<h2 id="section"></h2>
+<p>Mais exemplos se encontram na pasta <code>tests/</code>, e seus respectivos códigos em assembly na sub-pasta <code>tests/asm</code>.</p>
+<h1 id="bibliografia">Bibliografia</h1>
+<ol type="1">
+<li>[Recursive Rules] (https://www.gnu.org/software/bison/manual/html_node/Recursion.html)</li>
+<li>Compiladores Princípios, Técnicas e Ferramentas - Alfred V. Aho, Ravi Sethi, Jeffrey D. Ullman</li>
+</ol>
+
+    
+  </div>
+
+    
+</div>
+
+    </div>
+  </div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

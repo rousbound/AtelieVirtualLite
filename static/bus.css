@@ -1,0 +1,14 @@
+#mapid {
+       width: 1100px;
+       height: 800px;
+       border: 1px solid black; }
+
+
+#myRow{
+      margin: 0 auto;
+      padding: 5px; }
+
+#myBox{
+      padding: 5px;
+      border: 1px solid black; }
+

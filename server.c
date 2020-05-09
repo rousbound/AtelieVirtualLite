@@ -155,7 +155,7 @@ int main(void) {
     addr.sin_addr.s_addr = htonl(INADDR_ANY);
     addr.sin_port = htons(PORT);
     if (bind(sock, (struct sockaddr *) &addr, sizeof(addr))) err(1, "bind");
-    if (listen(sock, 16)) err(1, "listen"); // Backlog=16
+    if (listen(sock, 50)) err(1, "listen"); // Backlog=16
 
     while (1) {
         // Accept
